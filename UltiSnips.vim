@@ -18,7 +18,7 @@ call CheckLocalSnips()
 
 " Snippets variables
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UserVimSnippetsFolderName = g:IsWindowsOS ? '\UltiSnips' : '/UltiSnips'
+let g:UserVimSnippetsFolderName = ( has('win32') || has('win64') ) ? '\UltiSnips' : '/UltiSnips'
 exec ':set runtimepath+=' . expand( g:UserVimFilesFolderName ) . g:UserVimSnippetsFolderName
 
 let g:UltiSnipsExpandTrigger       = "<tab>"

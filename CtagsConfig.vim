@@ -1,5 +1,5 @@
 
-let g:ctags_path = g:IsWindowsOS ? 'ctags.exe' : '/usr/local/bin/ctags'
+let g:ctags_path =  has('win32') || has('win64') ? 'ctags.exe' : '/usr/local/bin/ctags'
 
 let g:ctags_statusline = 0
 
@@ -10,11 +10,11 @@ let generate_tags = 1
 let g:ctags_args = '-I __declspec+'
 
 ""let s:TagsFolderName = g:IsWindowsOS ? '$HOME/tags/Win' : '$HOME/tags/OSX'
-let TagsFolderName = g:IsWindowsOS ? '$HOME/tags/Win' : '$HOME/tags/OSX'
+let TagsFolderName =  ( has('win32') || has('win64') ) ? '$HOME/tags/Win' : '$HOME/tags/OSX'
 
 "" configure tags - add additional tags here or comment out not-used ones
 
-if ( g:IsWindowsOS )
+if (  ( has('win32') || has('win64') ) )
   set tags+='X:\Frameworks\tags\cpp\QT.tags'
 else
   exec ':set tags+=' . TagsFolderName . '/cpp/cpp.tags'

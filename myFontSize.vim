@@ -15,7 +15,7 @@ endif
 "let g:currentFontName='Inconsolata_for_Powerline'
 "let g:currentFontName='DejaVu\ Sans\ Mono\ for\ Powerline'
 "let g:currentFontName='DejaVu_Sans_Mono_for_Powerline'
-let g:currentFontName = g:IsWindowsOS ? 'DejaVu_Sans_Mono_for_Powerline' : 'DejaVu\ Sans\ Mono\ for\ Powerline'
+let g:currentFontName = has('win32') || has('win64') ? 'DejaVu_Sans_Mono_for_Powerline' : 'DejaVu\ Sans\ Mono\ for\ Powerline'
 let g:fontHeightList = [6, 7, 8, 8, 10, 11, 12, 14, 16, 18]
 let g:fontHeightListMin = 0
 let g:fontHeightListMax = 9
