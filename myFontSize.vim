@@ -2,7 +2,7 @@
 if has('gui_running')
   "set guifont=Inconsolata_for_Powerline:h12    " set fonts for gui vim
   "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-  if( has('win32') || has('win64' )
+  if( has('win32') || has('win64') )
     set guifont=DejaVu_Sans_Mono_for_Powerline:h11    " set fonts for gui vim
   else
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11    " set fonts for gui vim
