@@ -58,10 +58,10 @@ if has('gui_running')
     set guifont=DejaVuSansMonoForPowerLine_Nerd:h11    " set fonts for gui vim
   else
     "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11    " set fonts for gui vim
-    set guifont=DejaVuSansMonoForPowerLine\ Nerd:h11    " set fonts for gui vim
+    set guifont=DejaVuSansMonoForPowerLine\ Nerd\ Font:h11    " set fonts for gui vim
   endif
   "set transparency=10        " set transparent window
-  "call libcallnr("vimtweak.dll", "SetAlpha", 210) 
+  "call libcallnr("vimtweak.dll", "SetAlpha", 210)
 "  set guioptions=egmrt  " hide the gui menubar
 endif
 
@@ -69,4 +69,6 @@ endif
 "let g:currentFontName='DejaVu\ Sans\ Mono\ for\ Powerline'
 "let g:currentFontName='DejaVu_Sans_Mono_for_Powerline'
 "
+syntax match notesInProgress /<(CURRENT|INPROGRESS|STARTED|WIP|WAIT)>/
+highlight def link notesDoneItem Comment"
 
