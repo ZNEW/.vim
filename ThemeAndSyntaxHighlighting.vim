@@ -50,4 +50,23 @@ else
   endif
 endif
 
+if has('gui_running')
+  "set guifont=Inconsolata_for_Powerline:h12    " set fonts for gui vim
+  "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  if( has('win32') || has('win64') )
+    "set guifont=DejaVu_Sans_Mono_for_Powerline:h11    " set fonts for gui vim
+    set guifont=DejaVuSansMonoForPowerLine_Nerd:h11    " set fonts for gui vim
+  else
+    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11    " set fonts for gui vim
+    set guifont=DejaVuSansMonoForPowerLine\ Nerd:h11    " set fonts for gui vim
+  endif
+  "set transparency=10        " set transparent window
+  "call libcallnr("vimtweak.dll", "SetAlpha", 210) 
+"  set guioptions=egmrt  " hide the gui menubar
+endif
+
+"let g:currentFontName='Inconsolata_for_Powerline'
+"let g:currentFontName='DejaVu\ Sans\ Mono\ for\ Powerline'
+"let g:currentFontName='DejaVu_Sans_Mono_for_Powerline'
+"
 
