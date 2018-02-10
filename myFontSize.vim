@@ -2,7 +2,7 @@
 if has('gui_running')
   "set guifont=Inconsolata_for_Powerline:h12    " set fonts for gui vim
   "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-  if( g:IsWindowsOS )
+  if( has('win32') || has('win64' )
     set guifont=DejaVu_Sans_Mono_for_Powerline:h11    " set fonts for gui vim
   else
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11    " set fonts for gui vim
@@ -15,7 +15,7 @@ endif
 "let g:currentFontName='Inconsolata_for_Powerline'
 "let g:currentFontName='DejaVu\ Sans\ Mono\ for\ Powerline'
 "let g:currentFontName='DejaVu_Sans_Mono_for_Powerline'
-let g:currentFontName = has('win32') || has('win64') ? 'DejaVu_Sans_Mono_for_Powerline' : 'DejaVu\ Sans\ Mono\ for\ Powerline'
+let g:currentFontName = ( has('win32') || has('win64') ) ? 'DejaVu_Sans_Mono_for_Powerline' : 'DejaVu\ Sans\ Mono\ for\ Powerline'
 let g:fontHeightList = [6, 7, 8, 8, 10, 11, 12, 14, 16, 18]
 let g:fontHeightListMin = 0
 let g:fontHeightListMax = 9
